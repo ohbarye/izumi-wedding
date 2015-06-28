@@ -4,14 +4,18 @@ static var time : float;
 
 function Start()
 {
-	time = 0;
+	time = 120;
 }
 
 function Update()
 {
 	if( GoalArea.goal == false )
 	{
-		time += Time.deltaTime;
+		// timeout 
+		if( time < 0 ) {
+			Application.LoadLevel( Application.loadedLevel );
+		}
+		time -= Time.deltaTime;
 	}
 	
 	var now : int = time;
