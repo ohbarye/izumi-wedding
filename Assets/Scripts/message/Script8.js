@@ -38,7 +38,7 @@ function OnGUI(){
 				page = 3;
 			}
 		} else if (page == 3) {
-			GUI.Label( Rect ( Screen.width / 2 -150, 300, 200, 50 ), "ウソじゃないよ〜\n小学校からの『付き合い』じゃないか〜" , style);
+			GUI.Label( Rect ( Screen.width / 2 -150, 300, 200, 50 ), "ウソじゃないよ〜\n中学校からの『付き合い』じゃないか〜" , style);
 		}
 	}
 }

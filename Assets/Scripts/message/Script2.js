@@ -33,7 +33,7 @@ function OnGUI(){
 	 			page = 2;
 			}
 		} else if (page == 2) {
-			GUI.Label( Rect ( Screen.width / 2 -150, 250, 200, 50 ), "何言ってるの、長栄だよ〜\n結婚おめでとう〜" , style);
+			GUI.Label( Rect ( Screen.width / 2 -150, 250, 200, 50 ), "何言ってるの、榎本だよ〜\n結婚おめでとう〜" , style);
 		}
 	}
 }

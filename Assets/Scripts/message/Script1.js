@@ -28,7 +28,7 @@ page = 1;
 function OnGUI(){
 	if( touch ) {
 		if (page == 1) {
-			GUI.Label( Rect ( Screen.width / 2 -150, 250, 200, 50 ), "徹（とおる）…\nこんな大切な日に何をしている！？\n結婚式まであと120秒もないぞ…！八芳園へ急げ！！" , style);
+			GUI.Label( Rect ( Screen.width / 2 -150, 250, 200, 50 ), "徹（とおる）…\nこんな大切な日に何をしている！？\n結婚式まであと3分もないぞ…！八芳園へ急げ！！" , style);
 			if( GUI.Button( Rect( Screen.width / 2 -150, 350, 200, 30 ), "お前は誰だ？" )  ){
 	 			page = 2;
 			}
