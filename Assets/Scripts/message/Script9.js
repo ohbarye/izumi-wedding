@@ -1,34 +1,32 @@
-﻿#pragma strict
+#pragma strict
 
 var style : GUIStyle;
-static var touch : boolean;
-touch = false;
+static var touch = false;
+static var page = 0;
+static var texts = ["淳…殺す"];
+static var questions = [""];
 
-style.fontSize = 50;
-style.normal.textColor = Color.red;
-
-function OnTriggerEnter( col : Collider )
-{
-	if( col.tag == "Player" ) {
-		touch = true;
-	}
+function OnTriggerEnter( col : Collider ){
+	touch = ScriptUtil.touch(col, true, touch);
 }
 
-function OnTriggerExit( col : Collider )
-{
-	if( col.tag == "Player" ) {
-		touch = false;
-		page = 1;
-	}
+function OnTriggerExit( col : Collider ){
+	touch = ScriptUtil.touch(col, false, touch);
 }
-
-static var page : int;
-page = 1;
 
 function OnGUI(){
-	if( touch ) {
-		if (page == 1) {
-			GUI.Label( Rect ( Screen.width / 2 -150, 300, 200, 50 ), "淳…殺す" , style);
-		}
+	if(touch) {
+		displayText();
+		if (page < texts.length-1 && question()) { page += 1; }
 	}
+}
+
+function displayText() {
+	var style = ScriptUtil.style(style);
+	style.fontSize = 60;
+	style.normal.textColor = Color.red;
+	GUI.Label(ScriptUtil.textRect(), texts[page], style);
+}
+function question() {
+	return GUI.Button(ScriptUtil.buttonRect(), questions[page], ScriptUtil.q_style(GUIStyle("button")));
 }

@@ -1,39 +1,30 @@
-﻿#pragma strict
+#pragma strict
 
 var style : GUIStyle;
-static var touch : boolean;
-touch = false;
+static var touch = false;
+static var page = 0;
+static var texts = ["東武東上線から伝える、おめでとう！！"
+			,"通りすがりの新井くんです"];
+static var questions = ["東上線…高校生……？"];
 
-style.fontSize = 20;
-style.normal.textColor = Color.white;
-
-function OnTriggerEnter( col : Collider )
-{
-	if( col.tag == "Player" ) {
-		touch = true;
-	}
+function OnTriggerEnter( col : Collider ){
+	touch = ScriptUtil.touch(col, true, touch);
 }
 
-function OnTriggerExit( col : Collider )
-{
-	if( col.tag == "Player" ) {
-		touch = false;
-		page = 1;
-	}
+function OnTriggerExit( col : Collider ){
+	touch = ScriptUtil.touch(col, false, touch);
 }
-
-static var page : int;
-page = 1;
 
 function OnGUI(){
-	if( touch ) {
-		if (page == 1) {
-			GUI.Label( Rect ( Screen.width / 2 -150, 300, 200, 50 ), "東武東上線から伝える、おめでとう！！" , style);
-			if( GUI.Button( Rect( Screen.width / 2 -150, 350, 200, 30 ), "東上線…高校生……？" )  ){
-	 			page = 2;
-			}
-		} else if (page == 2) {
-			GUI.Label( Rect ( Screen.width / 2 -150, 300, 200, 50 ), "通りすがりの新井くんです" , style);
-		}
+	if(touch) {
+		displayText();
+		if (page < texts.length-1 && question()) { page += 1; }
 	}
+}
+
+function displayText() {
+	GUI.Label(ScriptUtil.textRect(), texts[page], ScriptUtil.style(style));
+}
+function question() {
+	return GUI.Button(ScriptUtil.buttonRect(), questions[page], ScriptUtil.q_style(GUIStyle("button")));
 }
