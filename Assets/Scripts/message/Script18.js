@@ -1,39 +1,30 @@
-﻿#pragma strict
+#pragma strict
 
 var style : GUIStyle;
-static var touch : boolean;
-touch = false;
+static var touch = false;
+static var page = 0;
+static var texts = ["Nice Jamp。徹。"
+			,"いいえ、幻\n本物のわたしはこの先よ\nもう少しだけ、頑張って！"];
+static var questions = ["ひ、Hiroko！！本物か？"];
 
-style.fontSize = 20;
-style.normal.textColor = Color.white;
-
-function OnTriggerEnter( col : Collider )
-{
-	if( col.tag == "Player" ) {
-		touch = true;
-	}
+function OnTriggerEnter( col : Collider ){
+	touch = ScriptUtil.touch(col, true, touch);
 }
 
-function OnTriggerExit( col : Collider )
-{
-	if( col.tag == "Player" ) {
-		touch = false;
-		page = 1;
-	}
+function OnTriggerExit( col : Collider ){
+	touch = ScriptUtil.touch(col, false, touch);
 }
-
-static var page : int;
-page = 1;
 
 function OnGUI(){
-	if( touch ) {
-		if (page == 1) {
-			GUI.Label( Rect ( Screen.width / 2 -150, 250, 200, 50 ), "Nice Jamp。徹。" , style);
-			if( GUI.Button( Rect( Screen.width / 2 -150, 350, 300, 30 ), "ひ、Hiroko！！本物か？" )  ){
-	 			page = 2;
-			}
-		} else if (page == 2) {
-			GUI.Label( Rect ( Screen.width / 2 -150, 250, 200, 50 ), "いいえ、幻\n本物のわたしはこの先よ\nもう少しだけ、頑張って！" , style);
-		}
+	if(touch) {
+		displayText();
+		if (page < texts.length-1 && question()) { page += 1; }
 	}
+}
+
+function displayText() {
+	GUI.Label(ScriptUtil.textRect(), texts[page], ScriptUtil.style(style));
+}
+function question() {
+	return GUI.Button(ScriptUtil.buttonRect(), questions[page], ScriptUtil.q_style(GUIStyle("button")));
 }

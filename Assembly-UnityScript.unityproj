@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{F3DC29C2-8446-94FF-4523-4509A0EB238D}</ProjectGuid>
+	<ProjectGuid>{0FF2C1F9-C5DC-B228-2DCA-2A0F34E80555}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -78,6 +78,7 @@
      <Compile Include="Assets\Scripts\message\Script7.js" />
      <Compile Include="Assets\Scripts\message\Script8.js" />
      <Compile Include="Assets\Scripts\message\Script9.js" />
+     <Compile Include="Assets\Scripts\message\ScriptUtil.js" />
      <None Include="Assets\Standard Assets\Projectors\Guidelines.txt" />
      <None Include="Assets\Standard Assets\Projectors\Sources\Shaders\Projector Multiply.shader" />
      <None Include="Assets\Nobiax Free Textures 04\readme.txt" />
