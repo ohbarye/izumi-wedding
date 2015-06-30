@@ -5,7 +5,7 @@ static var touch = false;
 static var page = 0;
 static var texts = ["？「あ、酒泉くん！」"
 			,"？「ちゃんとヒロコを幸せにしてよね！」\n？「徹…わたし待ってるよ！」"];
-static var questions = ["きみたちは……"];
+static var questions = ["きみたちは……？"];
 
 function OnTriggerEnter( col : Collider ){
 	touch = ScriptUtil.touch(col, true, touch);
