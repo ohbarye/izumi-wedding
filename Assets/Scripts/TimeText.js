@@ -1,10 +1,12 @@
 #pragma strict
 
 static var time : float;
+static var startTime : float;
+startTime = 180;
 
 function Start()
 {
-	time = 180;
+	time = startTime;
 }
 
 function Update()
