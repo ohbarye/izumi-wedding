@@ -19,6 +19,6 @@ function Update()
 	}
 
 	var now : int = time;
-	guiText.text = "<Color=red>TIME:" +
+	GetComponent.<GUIText>().text = "<Color=red>TIME:" +
 		now.ToString() + "</Color>";
 }

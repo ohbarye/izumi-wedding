@@ -1,0 +1,65 @@
+﻿;泉君結婚式用ゲーム　Title＆OP
+
+;メッセージ表示
+[showmessage]
+
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む 
+[call file=wide/system target="*system_setting_buttons"]
+
+;ゲーム作成で便利なマクロ集
+[call file=wide/libs/utils]
+[text_new name=_sp_chara_name layer=ui x="-168" y=-108.5 val="" color="DDFF00" fontsize=16 anchor="MiddleLeft"]
+[text_show name="_sp_chara_name"]
+[bg_new storage="room"]
+[bg_show ]
+
+
+[playbgm storage=Alarm]
+[wait time=5][stopbgm]
+「うーん・・・」　[p]
+
+
+ベッドの上に手を伸ばし、目覚まし時計を止めた。[r]
+デジタル時計には「2015年7月19日(日)AM7:00」[r]
+と表示されている。[p]
+誰だよ、日曜日の朝にこんな早く目覚ましかけたのは・・・。[r]
+そういえば今日は何か用事があったんだっけかな。[l][r]
+・・・うっ！！　突然、激しい頭痛に襲われた。[p]
+「いってぇ・・・」[r][l]
+突然の頭痛に戸惑っていると、不思議な感覚に陥った。[r]
+頭全体が透明なベールに包まれているような気がする。[p]
+今日は何か用事があったような気がするが、[r]
+どうしてもそれを思い出すことができない。[p]
+
+部屋のカレンダーに目を移してみた。[r]
+カレンダーには19日に赤ペンで大きくマルがつけられている。[r]
+その下には丁寧な字で「ひ ろ こ」と書かれていた。[p]
+「ひろこ…」[r]
+口に出してみると何か心地よい響きだ。[p]
+どうやら馴染みのある人物の名前らしいが、[r]
+僕は「ひろこ」という人物と長い間一緒に過ごしたのだろうか。[r][l]
+*a_common1
+そうだな、今日はこれから・・・[p]
+
+[select_new text="行かなきゃいけない場所がある気がする。今すぐ家を出なきゃ！" target=*select_a1 ]
+[select_new text="ベッドに戻って二度寝だ。よく分からないけど、一生独身でいいや！" target=*select_a2 ]
+[select_new text="頭痛がひどい・・・救急車を呼ばなきゃ！" target=*select_a3 ]
+[select_show sound=click ]
+
+*select_a1
+どこへ行けばいいのか分からないけど、とにかく行かないと！！[l]
+@jump file=wide/scene2 scene=new
+
+*select_a2
+・・・・・・。[r][l]
+こんなモヤモヤした状態じゃやっぱり寝られないな。[r]
+もう一度なにをすべきかよく考えよう。[p]
+@jump target=*a_common1
+
+*select_a3
+・・・・・・。[r][l]
+頭痛の原因は何かを忘れていることみたいだし、[r]
+病院では治りそうもないな。[r]
+もう一度なにをすべきかよく考えよう。[p]
+@jump target=*a_common1

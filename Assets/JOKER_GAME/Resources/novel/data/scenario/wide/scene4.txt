@@ -1,0 +1,66 @@
+﻿;泉君結婚式用ゲーム　ED
+
+;操作説明画面
+[bg_new name="Title004" layer="background" storage="nyoi"]
+[bg_show name="Title004"]
+
+;メッセージ表示
+[showmessage]
+;共通ライブラリ
+;セーブ・ロードバックログなど基本的な機能を取り込む 
+[call file=wide/system target="*system_setting_buttons"]
+
+[chara_new name=Love  storage=heart scale="0.16" x=0.2 y=0.65 ]
+[chara_new name=izumi6  storage=Izumikun scale="0.25" x=0.3 y=-1.6 ]
+[chara_new name=izumi5  storage=Izumikun scale="0.25" x=1 y=-1.6 ]
+[chara_new name=izumi4  storage=Izumikun scale="0.25" x=2 y=-1.6 ]
+[chara_new name=izumi3  storage=Izumikun scale="0.25" x=3 y=-1.6 ]
+[chara_new name=izumi2  storage=Izumikun scale="0.25" x=4 y=-1.6 ]
+[chara_new name=izumi1  storage=Izumikun scale="0.25" x=5 y=-1.6 ]
+[chara_new name=Hiroko1  storage=Hirokosan scale="0.5" x=0 y=-1.4 ]
+
+
+「いてて…」[r][l]
+　;泉君登場
+[show  name=izumi1 ][wait time=0.3]
+いきおい余ってガラスを破って窓から飛び込んでしまった。[p]
+ただ、今の衝撃と大切な皆のお蔭ではっきり思い出せた。[r]
+今日が僕の結婚式だってこと、[r]
+そして広子が僕の結婚相手だってことに。[p]
+
+
+「驚いた・・・大丈夫?」[r][l]
+　;広子さん登場
+[show  name=Hiroko1 ][wait time=0.3]
+ガラスをぶち破った僕を心配して、広子が駆け寄ってくる。[p]
+「心配をかけてごめん。[r]
+[hide name=izumi1 ][show  name=izumi2 ]
+少し遅れちゃったけど、僕たちの結婚式を始めようか」[p]
+[hide name=izumi2 ][show  name=izumi3 ]
+それにしても、こんな大事な人を忘れてしまっていたなんて、[r]
+本当にどうかしていたな。[p]
+[hide name=izumi3 ][show  name=izumi4 ]
+でも、もう二度と忘れてしまうことはないかな。[r][l]
+これまでも、そしてこれからも、[r]
+[hide name=izumi4 ][show  name=izumi5 ]
+広子とは長い間一緒に過ごしていくことになるのだから。[p]
+[playbgm storage=DQ4]
+[show  name=Love ]
+[hide name=izumi5 ][show  name=izumi6 ]
+[bg_hide name="Title004"]
+
+;クレジット
+～ 出演 ～[r]
+酒泉 徹[r]
+酒泉 広子[wait time=3][cm]
+
+～ 制作 ～[r]
+志木高軟式テニス部一同　　[wait time=3][cm]
+
+～ 写真提供 ～[r]
+清水 淳[r]
+広子様ご友人[wait time=3][cm]
+[wait time=3]
+
+結婚おめでとう。[r][wait time=2]
+末長くお幸せに…
