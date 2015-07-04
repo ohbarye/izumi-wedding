@@ -12,18 +12,14 @@
 [chara_new name=izumi2  storage=Izumikun scale="0.25" x=5.9 y=-1.5 ]
 [chara_new name=izumi1  storage=Izumikun scale="0.25" x=6.1 y=-1.5 ]
 
-[wait time=3.5]
 
 ;泉君登場
-
-[show  name=izumi1 ]
-[show  name=izumi2 ]
-[show  name=izumi3 ]
-[show  name=izumi4 ]
-[show  name=izumi5 ]
-[show  name=izumi6 ]
-
-
+[show  name=izumi1 time=0.2]
+[show  name=izumi2 time=0.2]
+[show  name=izumi3 time=0.2]
+[show  name=izumi4 time=0.2]
+[show  name=izumi5 time=0.2]
+[show  name=izumi6 time=0.2]
 
 ;開始ボタンを表示
 @image_new name="button_start" tag="button" x=-0.05 y=-3.5  storage="Go" scale=1.2
@@ -35,7 +31,7 @@
 *click_start
 [playse storage="start"]
 @anim name="button_start" scale=2.5 wait=false
-@hide tag="button" time=1
+@hide tag="button" time=0.5
 @bg_hide name="background" time=1.5
 
 ;シーン2からシーン3(ゲーム本編)へ変更
