@@ -3,9 +3,8 @@
 var style : GUIStyle;
 static var touch = false;
 static var page = 0;
-static var texts = ["東武東上線から伝える、おめでとう！！"
-			,"通りすがりの新井くんです"];
-static var questions = ["東上線…高校生……？"];
+static var texts = ["東武東上線から伝える、おめでとう！！"];
+static var questions = [""];
 
 function OnTriggerEnter( col : Collider ){
 	touch = ScriptUtil.touch(col, true, touch);
