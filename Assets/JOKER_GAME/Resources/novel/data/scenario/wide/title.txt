@@ -7,7 +7,7 @@
 
 [playbgm storage=DQ4]
 
-[wait time=2]
+[wait time=1]
 
 ;泉君登場
 [show name=izumi]
@@ -24,7 +24,7 @@
 [playse storage="start"]
 @anim name="button_start" scale=2.5 wait=false
 @hide tag="button" time=1
-@bg_hide name="background" time=1.5
+@bg_hide name="background" time=1
 
 ;Titleシーンからシーン１へ変更
 [wait time=1]

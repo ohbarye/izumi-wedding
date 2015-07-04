@@ -7,7 +7,7 @@
 ;メッセージ表示
 [showmessage]
 ;共通ライブラリ
-;セーブ・ロードバックログなど基本的な機能を取り込む 
+;セーブ・ロードバックログなど基本的な機能を取り込む
 [call file=wide/system target="*system_setting_buttons"]
 
 [chara_new name=Love  storage=heart scale="0.16" x=0.2 y=0.65 ]
@@ -21,8 +21,9 @@
 
 
 「いてて…」[r][l]
-　;泉君登場
-[show  name=izumi1 ][wait time=0.3]
+
+;泉君登場
+[show  name=izumi1 ]
 いきおい余ってガラスを破って窓から飛び込んでしまった。[p]
 ただ、今の衝撃と大切な皆のお蔭ではっきり思い出せた。[r]
 今日が僕の結婚式だってこと、[r]
@@ -31,18 +32,18 @@
 
 「驚いた・・・大丈夫?」[r][l]
 　;広子さん登場
-[show  name=Hiroko1 ][wait time=0.3]
+[show  name=Hiroko1 ]
 ガラスをぶち破った僕を心配して、広子が駆け寄ってくる。[p]
 「心配をかけてごめん。[r]
-[hide name=izumi1 ][show  name=izumi2 ]
+[hide name=izumi1 time=0.2][show  name=izumi2 time=0.2]
 少し遅れちゃったけど、僕たちの結婚式を始めようか」[p]
-[hide name=izumi2 ][show  name=izumi3 ]
+[hide name=izumi2 time=0.2][show  name=izumi3 time=0.2]
 それにしても、こんな大事な人を忘れてしまっていたなんて、[r]
 本当にどうかしていたな。[p]
-[hide name=izumi3 ][show  name=izumi4 ]
+[hide name=izumi3 time=0.2][show  name=izumi4 time=0.2]
 でも、もう二度と忘れてしまうことはないかな。[r][l]
 これまでも、そしてこれからも、[r]
-[hide name=izumi4 ][show  name=izumi5 ]
+[hide name=izumi4 time=0.2][show  name=izumi5 ]
 広子とは長い間一緒に過ごしていくことになるのだから。[p]
 [playbgm storage=DQ4]
 [show  name=Love ]
