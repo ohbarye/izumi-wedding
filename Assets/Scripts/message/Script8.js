@@ -3,7 +3,7 @@
 var style : GUIStyle;
 static var touch = false;
 static var page = 0;
-static var texts = ["酒泉く〜ん"
+static var texts = ["酒泉く〜ん\nこっちおいでよ〜"
 			,"ここを右に行くと八芳園まで近道だよ〜\n見えない道があるんだ〜"
 			,"ウソじゃないよ〜\n中学校からの『付き合い』じゃないか〜"];
 static var questions = ["清水淳(あっくん)じゃないか"

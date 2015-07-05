@@ -3,9 +3,9 @@
 var style : GUIStyle;
 static var touch = false;
 static var page = 0;
-static var texts = ["Nice Jamp。徹。"
+static var texts = ["ナイスジャンプ。徹。"
 			,"いいえ、幻\n本物のわたしはこの先よ\nもう少しだけ、頑張って！"];
-static var questions = ["ひ、Hiroko！！本物か？"];
+static var questions = ["ひ、ひろこ！！本物か？"];
 
 function OnTriggerEnter( col : Collider ){
 	touch = ScriptUtil.touch(col, true, touch);
