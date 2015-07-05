@@ -3,7 +3,7 @@
 var style : GUIStyle;
 static var touch = false;
 static var page = 0;
-static var texts = ["酒泉ィ！\nテメーヒロコを裏切ったらブッ飛ばすからな！！"];
+static var texts = ["ヒロコを裏切ったらブッ飛ばすからな！！"];
 static var questions = [""];
 
 function OnTriggerEnter( col : Collider ){

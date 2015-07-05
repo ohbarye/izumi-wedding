@@ -3,7 +3,7 @@
 var style : GUIStyle;
 static var touch = false;
 static var page = 0;
-static var texts = ["結婚おめでとう！！\n絶対にヒロコを幸せにしてね！"];
+static var texts = ["絶対にヒロコを幸せにしてね！"];
 static var questions = [""];
 
 function OnTriggerEnter( col : Collider ){

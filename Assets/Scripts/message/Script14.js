@@ -3,7 +3,7 @@
 var style : GUIStyle;
 static var touch = false;
 static var page = 0;
-static var texts = ["？「女にとっては、」\n？「自分が愛している以上に、」\n？「自分を愛してくれる男と結婚するのが一番良い。」"];
+static var texts = ["Happy Wedding!"];
 static var questions = [""];
 
 function OnTriggerEnter( col : Collider ){

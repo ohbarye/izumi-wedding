@@ -3,9 +3,8 @@
 var style : GUIStyle;
 static var touch = false;
 static var page = 0;
-static var texts = ["酒泉く〜ん　何してるの〜"
-			,"何言ってるの、榎本だよ〜\n結婚おめでとう〜"];
-static var questions = ["きみは……？"];
+static var texts = ["酒泉く〜ん　結婚おめでとう〜"];
+static var questions = [""];
 
 function OnTriggerEnter( col : Collider ){
 	touch = ScriptUtil.touch(col, true, touch);

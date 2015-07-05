@@ -3,7 +3,7 @@
 var style : GUIStyle;
 static var touch = false;
 static var page = 0;
-static var texts = ["そうか、完全に…思い出した！\n僕は、ヒロコと結婚するんだ…！！\n八芳園へ急がないと…！！"];
+static var texts = ["そうか、思い出してきた！\n僕は、結婚するんだ…！！\n八芳園へ急がないと！！"];
 static var questions = [""];
 
 function OnTriggerEnter( col : Collider ){

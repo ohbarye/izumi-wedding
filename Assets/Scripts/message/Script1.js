@@ -3,7 +3,7 @@
 var style : GUIStyle;
 static var touch = false;
 static var page = 0;
-static var texts = ["徹（とおる）…\nこんな大切な日に何をしている！？\n結婚式まであと3分もないぞ…！八芳園へ急げ！！"
+static var texts = ["徹（とおる）…\nこんな大切な日に何をしている！？\n結婚式まで時間がないぞ…！八芳園へ急げ！！"
 			,"僕？\n僕のことは気にするな…\nちなみに左に行くと死ぬぞ"];
 static var questions = ["誰だ？"];
 

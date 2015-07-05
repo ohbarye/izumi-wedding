@@ -8,7 +8,6 @@ static var questions = [""];
 
 function OnTriggerEnter( col : Collider ){
 	touch = ScriptUtil.touch(col, true, touch);
-	GetComponent.<AudioSource>().Play();
 }
 
 function OnTriggerExit( col : Collider ){
